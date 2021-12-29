@@ -1,0 +1,57 @@
+NPM Public Registry
+NPM Organization Registry
+NPM Private Registry    <---- Duke's Nexus
+
+===================================================
+npmjs.com
+will.m.linker@gmail.com
+
+User Name: willlinker
+Password: RetireIn$2021
+===================================================
+
+My Public Organization
+https://npmjs.com/org/wmltickets
+@wmltickets
+Token: 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
+
+In the "common" folder
+npm init -y
+git init
+git add .
+git commit -m "initial commit"
+npm login
+npm publish --access public
+
+
+*
+* We will write Typescript but compile to Javascript before publishing, this
+* is why on the npm install below we use the "--save-dev" so it will only before
+* in the devleopment enviroment.
+*
+tsc --init
+npm install typescript del-cli --save-dev
+*
+* In the package.json, delete the test script and add a build script for the typescript compiler.
+*    "build": "tsc"
+*
+* Then edit the tsconfig.json file as follows:
+*  uncomment:  "declaration": true,
+*  set      :  "outDir": "./build"
+*
+* npm run build
+*
+* IN the package.json we need to point to file that will be included when we import this
+* and that is the "main", we also added the "types" for typescript and the "files" controls
+* which files are included.
+
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "files": [
+    "build/**/*"
+  ],
+*
+* use npm version patch to update the version number in the package.json
+npm version patch
+npm run build
+npm publish
