@@ -11,7 +11,8 @@ export const errorHandler = (err: Error, req: Request, res: Response, next: Next
   }
   else
   {
-    console.log('[ErrorHandler] not a CustomError!!!!', err); 
+    console.error('[ErrorHandler] not a CustomError!!!!');
+    console.error(err); 
   }
   res.status(400).send({errors: [{ message: err.message }] });
 };

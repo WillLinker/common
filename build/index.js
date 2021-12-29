@@ -10,6 +10,9 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+/*
+ * Added a commit to the index.ts file :-)
+ */
 __exportStar(require("./errors/BadRequestError"), exports);
 __exportStar(require("./errors/CustomError"), exports);
 __exportStar(require("./errors/NotAuthorizedError"), exports);
