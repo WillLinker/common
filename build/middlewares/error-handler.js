@@ -7,7 +7,8 @@ const errorHandler = (err, req, res, next) => {
         return res.status(err.statusCode).send(err.serializeErrors());
     }
     else {
-        console.log('[ErrorHandler] not a CustomError!!!!', err);
+        console.error('[ErrorHandler] not a CustomError!!!!');
+        console.error(err);
     }
     res.status(400).send({ errors: [{ message: err.message }] });
 };
