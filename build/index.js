@@ -29,3 +29,5 @@ __exportStar(require("./events/base-listener"), exports);
 __exportStar(require("./events/base-publisher"), exports);
 __exportStar(require("./events/subjects"), exports);
 __exportStar(require("./events/Types/OrderStatus"), exports);
+__exportStar(require("./events/OrderCancelledEvent"), exports);
+__exportStar(require("./events/OrderCreatedEvent"), exports);
