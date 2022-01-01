@@ -55,3 +55,11 @@ npm install typescript del-cli --save-dev
 npm version patch
 npm run build
 npm publish
+
+#
+# we build a script 
+    npm run pub
+#
+#  then in the tickets folder update the  package.json wiht
+    npm update @wmltickets/common
+    
