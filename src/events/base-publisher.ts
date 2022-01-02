@@ -6,7 +6,7 @@ interface Event { subject: Subjects, data: any };
 export abstract class Publisher<T extends Event> {
   abstract subject: T['subject'];
 //  abstract onMessage(data: T['data'], msg:Message): void
-  private client:Stan;
+  protected client:Stan;
   protected ackWait = (5 * 1000); // Default to 5 seconds.
 
   constructor(client: Stan) {
