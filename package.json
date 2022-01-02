@@ -10,7 +10,8 @@
   "scripts": {
     "clean": "rm -fR ./build/*",
     "build": "npm run clean && tsc",
-    "pub": "git add . && git commit -m \"updates\" && npm version patch && npm run build && npm publish && echo \"\nIn the consumer component use:\n  npm update @wmltickets/common \""
+    "pub": "git add . && git commit -m \"updates\" && npm version patch && npm run build && npm publish && echo \"\nIn the consumer component use:\n  npm update @wmltickets/common; cd ../client; npm update @wmltickets/common; cd ../expiration; npm update @wmltickets/common; cd ../orders; npm update @wmltickets/common; cd ../payments; npm update @wmltickets/common; cd ../tickets; npm update @wmltickets/common \""
+
   },
   "keywords": [],
   "author": "",

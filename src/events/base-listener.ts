@@ -33,8 +33,13 @@ export abstract class Listener<T extends Event> {
       const messageDate = msg.getTimestamp();
       //console.log(`[Received Message:] Subject: "${msg.getSubject()}", Queue Group: "${this.queueGroupName}", Seq:${msg.getSequence()}`);
       const parsed = this.parseMessage(msg);
-      this.onMessage(parsed, msg);
-      //msg.ack()
+      try {
+        this.onMessage(parsed, msg);
+      }
+      catch(err)
+      {
+        console.error(`[base-listener:onMessage] Caugh Error:`, err);
+      }
     });
   }
 

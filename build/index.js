@@ -31,3 +31,4 @@ __exportStar(require("./events/subjects"), exports);
 __exportStar(require("./events/Types/OrderStatus"), exports);
 __exportStar(require("./events/OrderCancelledEvent"), exports);
 __exportStar(require("./events/OrderCreatedEvent"), exports);
+__exportStar(require("./events/ExpirationCompleteEvent"), exports);
