@@ -18,7 +18,7 @@ class Listener {
         console.log(`[base-listener] Subscribed to Subject: "${this.subject}" with Queue Group: "${this.queueGroupName}"`);
         subscription.on('message', (msg) => {
             const messageDate = msg.getTimestamp();
-            console.log(`[Received Message:] Subject: "${msg.getSubject()}", Queue Group: "${this.queueGroupName}", Seq:${msg.getSequence()}`);
+            //console.log(`[Received Message:] Subject: "${msg.getSubject()}", Queue Group: "${this.queueGroupName}", Seq:${msg.getSequence()}`);
             const parsed = this.parseMessage(msg);
             this.onMessage(parsed, msg);
             //msg.ack()
