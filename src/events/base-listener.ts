@@ -31,7 +31,7 @@ export abstract class Listener<T extends Event> {
 
     subscription.on('message', (msg: Message) => {
       const messageDate = msg.getTimestamp();
-      console.log(`[Received Message:] Subject: "${msg.getSubject()}", Queue Group: "${this.queueGroupName}", Seq:${msg.getSequence()}`);
+      //console.log(`[Received Message:] Subject: "${msg.getSubject()}", Queue Group: "${this.queueGroupName}", Seq:${msg.getSequence()}`);
       const parsed = this.parseMessage(msg);
       this.onMessage(parsed, msg);
       //msg.ack()
